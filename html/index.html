@@ -1,130 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Contact form</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
     <style>
-        html, body {
-            min-height: 100%;
-            padding: 0;
-            margin: 0;
-            font-family: Roboto, Arial, sans-serif;
-            font-size: 14px;
-            color: #666;
-        }
-        h1 {
-            margin: 0 0 20px;
-            font-weight: 400;
-            color: #1c87c9;
-        }
-        p {
-            margin: 0 0 5px;
-        }
+      html,
+      body {
+        min-height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+      }
+      h1 {
+        margin: 0 0 20px;
+        font-weight: 400;
+        color: #1c87c9;
+      }
+      p {
+        margin: 0 0 5px;
+      }
+      .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1c87c9;
+      }
+      form {
+        padding: 25px;
+        margin: 25px;
+        box-shadow: 0 2px 5px #f5f5f5;
+        background: #f5f5f5;
+      }
+      .fas {
+        margin: 25px 10px 0;
+        font-size: 72px;
+        color: #fff;
+      }
+      .fa-envelope {
+        transform: rotate(-20deg);
+      }
+      .fa-at,
+      .fa-mail-bulk {
+        transform: rotate(10deg);
+      }
+      input,
+      textarea {
+        width: calc(100% - 18px);
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #1c87c9;
+        outline: none;
+      }
+      input::placeholder {
+        color: #666;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #1c87c9;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
+      button:hover {
+        background: #2371a0;
+      }
+      @media (min-width: 568px) {
         .main-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #1c87c9;
+          flex-direction: row;
         }
+        .left-part,
         form {
-            padding: 25px;
-            margin: 25px;
-            box-shadow: 0 2px 5px #f5f5f5;
-            background: #f5f5f5;
-        }
-        .fas {
-            margin: 25px 10px 0;
-            font-size: 72px;
-            color: #fff;
+          width: 30%;
         }
         .fa-envelope {
-            transform: rotate(-20deg);
+          margin-top: 0;
+          margin-left: 20%;
         }
-        .fa-at, .fa-mail-bulk {
-            transform: rotate(10deg);
+        .fa-at {
+          margin-top: -10%;
+          margin-left: 65%;
         }
-        input, textarea {
-            width: calc(100% - 18px);
-            padding: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #1c87c9;
-            outline: none;
+        .fa-mail-bulk {
+          margin-top: 2%;
+          margin-left: 28%;
         }
-        input::placeholder {
-            color: #666;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background: #1c87c9;
-            font-size: 16px;
-            font-weight: 400;
-            color: #fff;
-        }
-        button:hover {
-            background: #2371a0;
-        }
-        @media (min-width: 568px) {
-            .main-block {
-                flex-direction: row;
-            }
-            .left-part, form {
-                width: 30%;
-            }
-            .fa-envelope {
-                margin-top: 0;
-                margin-left: 20%;
-            }
-            .fa-at {
-                margin-top: -10%;
-                margin-left: 65%;
-            }
-            .fa-mail-bulk {
-                margin-top: 2%;
-                margin-left: 28%;
-            }
-        }
+      }
     </style>
     <script>
-        function redirectToSuccess(event) {
-            event.preventDefault();
+      function redirectToSuccess(event) {
+        event.preventDefault();
 
-            if (grecaptcha.getResponse()) {
-                const name = document.querySelector('input[name="name"]').value;
-                const email = document.querySelector('input[name="email"]').value;
-                const phone = document.querySelector('input[name="phone"]').value;
-                const url = `success.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
-                window.location.href = url;
-            } else {
-                alert("Please complete the reCAPTCHA");
-            }
+        if (grecaptcha.getResponse()) {
+          const name = document.querySelector('input[name="name"]').value;
+          const email = document.querySelector('input[name="email"]').value;
+          const phone = document.querySelector('input[name="phone"]').value;
+          const url = `success.html?name=${encodeURIComponent(
+            name
+          )}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(
+            phone
+          )}`;
+          window.location.href = url;
+        } else {
+          alert("Please complete the reCAPTCHA");
         }
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-block">
-        <div class="left-part">
-            <i class="fas fa-envelope"></i>
-            <i class="fas fa-at"></i>
-            <i class="fas fa-mail-bulk"></i>
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+      <form onsubmit="redirectToSuccess(event)">
+        <h1>Search user information</h1>
+        <h3>Search by name, email, phone or combine criteria...</h3>
+        <div class="info">
+          <input
+            class="fname"
+            type="text"
+            name="name"
+            placeholder="Full name"
+          />
+          <input type="text" name="email" placeholder="Email" />
+          <input type="text" name="phone" placeholder="Phone number" />
         </div>
-        <form onsubmit="redirectToSuccess(event)">
-            <h1>Search user information</h1>
-            <h3>Search by name, email, phone or combine criteria...</h3>
-            <div class="info">
-                <input class="fname" type="text" name="name" placeholder="Full name" />
-                <input type="text" name="email" placeholder="Email" />
-                <input type="text" name="phone" placeholder="Phone number" />
-            </div>
-            <div class="g-recaptcha" data-sitekey="6LepLPcpAAAAACJA5dwVc70LiuY2VfqUT5p9Bn3a"></div>
-            <div>
-                <button id="submit">Submit</button>
-            </div>
-        </form>
+        <div
+          class="g-recaptcha"
+          data-sitekey="replace-with-your-data-key"
+        ></div>
+        <div>
+          <button id="submit">Submit</button>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
