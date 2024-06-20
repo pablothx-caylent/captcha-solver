@@ -4,7 +4,8 @@
 
 #### This is a demo on how to run a reCaptcha Solver using Python3 Selenium and selenium-recaptcha-solver 1.9.0 package
 
-### Presentation 
+### Presentation
+
 [Solving reCaptcha with Code - Presentation](https://docs.google.com/presentation/d/1EVZq1njnrB15p6CjDqNggVFr2vFFafde9WDpkv4oKZo/edit?usp=sharing)
 
 ## Repository
@@ -15,9 +16,9 @@
 
 ### Step 1: Download the Repository
 
-Download the repository from the [GitHub link](https://github.com/pablothx-caylent/captcha-solver).
+Download the repository from [GitHub](https://github.com/pablothx-caylent/captcha-solver).
 
-### Step 2: Install Dependencies in a virtual environment
+### Step 2: Install Dependencies in a virtual environment (Make sure to have installed Python 3)
 
 ```sh
 python3 -m venv myenv
