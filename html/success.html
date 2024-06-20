@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Information</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            background: #1c87c9;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #1c87c9;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .info-list li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        .info-list li span {
+            font-weight: bold;
+        }
+        .left-part {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .left-part i {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #1c87c9;
+        }
+    </style>
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get('name'),
+                email: params.get('email'),
+                phone: params.get('phone')
+            };
+        }
+
+        window.onload = function() {
+            const userInfo = getQueryParams();
+            document.getElementById('name').textContent = userInfo.name;
+            document.getElementById('email').textContent = userInfo.email;
+            document.getElementById('phone').textContent = userInfo.phone;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information</h1>
+        <ul class="info-list">
+            <li><span>Name:</span> <span id="name">Jon Doe</span></li>
+            <li><span>Email:</span> <span id="email">john.doe@email.com</span></li>
+            <li><span>Phone:</span> <span id="phone">123456789</span></li>
+        </ul>
+        <div class="left-part">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-at"></i>
+            <i class="fas fa-mail-bulk"></i>
+        </div>
+    </div>
+</body>
+</html>
