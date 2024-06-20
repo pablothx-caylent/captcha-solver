@@ -48,4 +48,14 @@ Once the Docker container is running, you can run the script with the following 
 python3 captcha.py
 ```
 
-Then you will see how chrome starts and uses the Selenium-recaptcha-solver package to solve ReCAPTCHA challenges.
+#### You will see how chrome starts and uses the Selenium-recaptcha-solver package to solve ReCAPTCHA challenges.
+
+#### First image you see is when selenium opens the URL
+![Form](img/form.png)
+#### Then you can see how it starts resolving the recaptcha challenge
+![Form](img/form2.png)
+![Form](img/form3.png)
+
+#### Finally it will click on submit and redirect you to to success page.
+
+![Form](img/form4.png)
