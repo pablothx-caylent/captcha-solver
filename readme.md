@@ -4,19 +4,19 @@
 
 #### This is a demo on how to run a reCaptcha Solver using Python3 Selenium and selenium-recaptcha-solver 1.9.0 package
 
-## Presentation
+## Presentation [Link](https://docs.google.com/presentation/d/1EVZq1njnrB15p6CjDqNggVFr2vFFafde9WDpkv4oKZo/edit?usp=sharing)
 
 [Solving reCaptcha with Code - Presentation](https://docs.google.com/presentation/d/1EVZq1njnrB15p6CjDqNggVFr2vFFafde9WDpkv4oKZo/edit?usp=sharing)
 
 ## Repository
 
-[GitHub Repository](http://github.com/lalala)
+[GitHub Repository](https://github.com/pablothx-caylent/captcha-solver)
 
 ## How to run this example
 
 ### Step 1: Download the Repository
 
-Download the repository from the [GitHub link](http://github.com/lalala).
+Download the repository from the [GitHub link](https://github.com/pablothx-caylent/captcha-solver).
 
 ### Step 2: Install Dependencies in a virtual environment
 
@@ -49,4 +49,3 @@ python3 captcha.py
 ```
 
 Then you will see how chrome starts and uses the Selenium-recaptcha-solver package to solve ReCAPTCHA challenges.
-
