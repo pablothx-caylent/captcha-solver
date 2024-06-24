@@ -24,7 +24,11 @@ Check the installation steps [Docker](https://docs.docker.com/desktop/install/ma
 
 ```sh
 brew install python
+
+brew install pyenv
+
 python3 -m venv myenv
+
 source myenv/bin/activate
 ```
 
