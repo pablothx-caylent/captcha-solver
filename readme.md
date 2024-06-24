@@ -18,9 +18,12 @@
 
 Download the repository from [GitHub](https://github.com/pablothx-caylent/captcha-solver).
 
-### Step 2: Install Dependencies in a virtual environment (Make sure to have installed Python 3)
+### Step 2: Install Docker, Python and dependencies in a virtual environment
+
+Check the installation steps [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ```sh
+brew install python
 python3 -m venv myenv
 source myenv/bin/activate
 ```
@@ -51,8 +54,11 @@ python3 captcha.py
 #### You will see how chrome starts and uses the Selenium-recaptcha-solver package to solve ReCAPTCHA challenges.
 
 #### First image you see is when selenium opens the URL
+
 ![Form](img/form.png)
+
 #### Then you can see how it starts resolving the recaptcha challenge
+
 ![Form](img/form2.png)
 ![Form](img/form3.png)
 
