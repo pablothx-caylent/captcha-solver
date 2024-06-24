@@ -20,7 +20,7 @@ Download the repository from [GitHub](https://github.com/pablothx-caylent/captch
 
 ### Step 2: Install Docker, Python and dependencies in a virtual environment
 
-Check the installation steps [Docker](https://docs.docker.com/desktop/install/mac-install/)
+Check the installation steps for [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ```sh
 brew install python
